@@ -1,0 +1,340 @@
+body{
+
+	overflow: hidden;
+
+}
+
+
+.body-human{
+	width: 50px;
+	height: 120px;
+	background: red;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-top: 8%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+
+	animation-name: bodyH;
+	animation-duration: 2s;
+	animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-play-state: running;
+}
+
+.head{
+	position: absolute;
+
+	background: #B9935A;
+	width: 70px;
+	height: 70px;
+
+	border-radius: 50%;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: -80px;
+	margin-left: calc(50% - 35px);
+	margin-right: calc(50% - 35px);
+}
+.head::before{
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: red;
+
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -20px;
+}
+
+.eyes{
+	position: absolute;
+	width: 100%;
+	height: 15px;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+.eyes-l{
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	background: #FFF;
+
+	margin-left: 10%;
+	border-radius: 50%;
+}
+.eyes-l::before{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #000;
+
+	border-radius: 50%;
+}
+.eyes-r{
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	background: #FFF;
+
+	margin-left: 50%;
+	border-radius: 50%;
+}
+.eyes-r::before{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #000;
+
+	border-radius: 50%;
+}
+
+.hands{
+	width: 100%;
+	height: 20px;
+}
+
+.hands-l{
+	position: absolute;
+	background:#B9935A;
+	width: 20px;
+	height: 80px;
+	transform: rotateZ(-50deg);
+
+	margin-left: 20%;
+
+	border-bottom-left-radius: 40%;
+	border-bottom-right-radius: 40%;
+
+	animation-name: hl;
+
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;	
+
+}
+
+.hands-l::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	background: red;
+}
+
+.hands-r{
+	position: absolute;
+	width: 20px;
+	height: 80px;
+	transform: rotateZ(-50deg);
+
+	border-bottom-left-radius: 40%;
+	border-bottom-right-radius: 40%;
+
+	margin-left: 50%;
+
+	animation-name: hr;
+
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;	
+}
+
+.hands-r::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	background: #B9935A;
+
+	bottom: 0;
+}
+@keyframes hl{
+	0%{
+		transform: rotateZ(20deg);
+	}
+	50%{
+		transform: rotateZ(-50deg);
+	}
+	100%{
+		transform: rotateZ(20deg);		
+	}
+}
+
+
+@keyframes hr{
+	0%{
+		transform: rotateZ(-50deg);
+	}
+	50%{
+		transform: rotateZ(-20deg);
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+		transform: rotateZ(-50deg);		
+	}
+}
+
+
+
+
+
+.legs{
+	background: red;
+	width: 100%;
+	height: 30px;
+
+	position: absolute;
+
+	bottom: 0;
+	margin-top: 100%;
+	margin-bottom: 0px;
+}
+.legs-left{
+	position: absolute;
+	width: 50%;
+	height: 110px;
+	background: red;
+
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+	transform: rotateZ(0deg);
+
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;	
+
+	animation-name: lf;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+
+}
+.legs-right{
+	position: absolute;
+	width: 50%;
+	height: 110px;
+	background: red;
+
+	transform: rotateZ(-25deg);
+
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+	animation-name: lr;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+
+}
+.floor{
+	width: 600px;
+	height: 5px;
+	background: #000;
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	margin-top: 31%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+
+	animation-name: steep;
+  	animation-duration: 2s; 
+  	animation-timing-function: linear;
+  	animation-delay: 0;
+  	animation-iteration-count: infinite;
+  	animation-direction: normal;
+  	animation-fill-mode: both;
+  	animation-play-state: running;	
+}
+
+@keyframes bodyH{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(100px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+
+}
+
+@keyframes lf{
+	0%{
+		transform: rotateZ(0deg);	
+	}
+	50% {
+		transform: rotateZ(38deg);
+		margin-left: 5%;
+	}
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+@keyframes lr{
+	0%{
+		transform: rotateZ(0deg);	
+	}
+	50% {
+		transform: rotateZ(-20deg);
+		margin-right: 5px;
+	}
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+@keyframes steep{
+	0% {
+		transform: translateX(1000px);
+	}
+	100% {
+		transform: translateX(-1000px);
+	}
+}
